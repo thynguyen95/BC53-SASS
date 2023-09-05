@@ -1,0 +1,156 @@
+// variable color
+$color-black: #000;
+$color-white: #fff;
+
+// tạo mixin với cú pháp mixin tenMixin(){}
+// sử dụng mixin: @include tenMixin();
+@mixin styleBtn($bg, $fs, $color, $borderRadius, $pd, $align) {
+  background: $bg;
+  font-size: $fs;
+  color: $color;
+  border-radius: $borderRadius;
+  padding: $pd;
+  text-align: $align;
+}
+
+@mixin styleText($fs, $color, $fw) {
+  font-size: $fs;
+  color: $color;
+  font-weight: $fw;
+}
+
+.btn1 {
+  @include styleBtn(black, 20px, white, 10px, 10px, center);
+}
+
+.btn2 {
+  @include styleBtn(yellow, 20px, white, 10px, 10px, center);
+}
+
+//cấu trúc phân cấp tương tự html.
+// ký tự &(parent selector): sẽ đại diện cho class cha đứng trước
+.header {
+  // .header .navbar.navbar-expand
+  .navbar {
+    background: $color-black !important;
+
+    // &: tại vị trí này đại diện cho class .navbar
+    &.navbar-expand {
+      font-size: 30px;
+    }
+
+    &-brand {
+      @include styleText(30px, $color-white, 700);
+    }
+  }
+}
+
+.test {
+  &::before {
+    content: "hello";
+  }
+}
+
+.c-list1 {
+  //   khai báo biến $root: đại diện cho .c-list1
+  $root: &;
+
+  &__item {
+    a {
+      color: blue;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  &--color2 {
+    // #{$root}: đại diện cho .c-list1
+    #{$root}__item {
+      a {
+        color: yellow;
+      }
+    }
+  }
+}
+
+.background {
+  width: 500px;
+  height: 300px;
+  background: pink;
+}
+
+.background2 {
+  // extend: thừa kế lại tất cả css của class đó
+  @extend .background;
+  background: yellow;
+}
+
+$breakpoint: (
+  "extra-large": 1200px,
+  "large": 992px,
+  "medium": 768px,
+  "small": 576px,
+);
+
+@mixin responsive($screen) {
+  // map-has-key: cho biết trong biến mảng $breakpoint có key được truyền vào hay không. Nó trả về giá trị true/false
+  @if (map-has-key($map: $breakpoint, $key: $screen)) {
+    // map-get: sẽ trả về giá trị thông qua key
+    $width: map-get(
+      $map: $breakpoint,
+      $key: $screen,
+    );
+    @media screen and (max-width: $width) {
+      // @content: nội dung truyền vào bên trong mixin
+      @content;
+    }
+  } @else {
+    @warn "`${$screen}` không tồn tại trong $breakpoint";
+  }
+}
+// @media screen and (max-width: 768px) {
+//     // thuộc tính css cần responsive
+// }
+
+.test {
+  @include responsive("medium") {
+    // color: brown;
+
+    @include styleText(30px, red, 700);
+  }
+}
+
+[data-star] {
+  text-align: left;
+  font-style: normal;
+  display: inline-block;
+  position: relative;
+  unicode-bidi: bidi-override;
+}
+[data-star]::before {
+  display: block;
+  content: "★★★★★";
+  color: #eee;
+}
+[data-star]::after {
+  white-space: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "★★★★★";
+  width: 0;
+  color: #ff8c00;
+  overflow: hidden;
+  height: 100%;
+}
+
+$percent: 2%;
+@for $i from 0 to 50 {
+  [data-star^="#{$i/10}"] {
+    &:after {
+      width: $percent * $i;
+    }
+  }
+}
