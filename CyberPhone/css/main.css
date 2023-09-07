@@ -9,10 +9,30 @@ body {
   font-family: "Nunito Sans", sans-serif;
   background: #f5f9fe;
 }
+.darkMode html,
+.darkMode body {
+  background: #121212;
+}
+
+.themebox {
+  width: 200px;
+  background: #e2ebfc;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  z-index: 99;
+  padding: 20px;
+}
 
 .header {
+  width: 100%;
   background: #f5f9fe;
   box-shadow: 0 2px 4px #e2ebfc;
+  position: fixed;
+  z-index: 99;
+}
+.darkMode .header {
+  background: #353536;
 }
 .header__logo {
   font-size: 30px;
@@ -47,4 +67,45 @@ body {
 }
 .header .navbar-nav .nav-link:hover::after {
   transform: scaleX(1);
+}
+
+.carousel {
+  background: url("../image/product-header-bg.jpg") no-repeat bottom center/cover;
+  padding: 200px 0;
+}
+.carousel__action {
+  display: flex;
+}
+.carousel__btn1 {
+  background: transparent;
+  border: 2px solid #2a73dd;
+  border-radius: 10px;
+  color: #2a73dd;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+}
+.carousel__btn1 i {
+  margin-right: 5px;
+}
+.carousel__btn1:hover {
+  text-decoration: none;
+  background: #2a73dd;
+  color: #fff;
+}
+.carousel__btn2 {
+  background: linear-gradient(120deg, #60a4f4, #2a73dd);
+  border: 2px solid linear-gradient(120deg, #60a4f4, #2a73dd);
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 30px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 10px;
+}
+.carousel__btn2 i {
+  margin-right: 5px;
+}
+.carousel__btn2:hover {
+  text-decoration: none;
+  background: linear-gradient(120deg, #60a4f4, #2a73dd);
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */

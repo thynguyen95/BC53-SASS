@@ -191,7 +191,7 @@ $sizes: 40px, 50px, 60px;
 }
 
 $percent: 2%;
-@for $i from 0 through 50 {
+@for $i from 0 to 50 {
   [data-star^="#{$i/10}"] {
     &:after {
       width: $percent * $i;

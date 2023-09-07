@@ -442,8 +442,4 @@
 
 [data-star^="4.9"]:after {
   width: 98%;
-}
-
-[data-star^="5"]:after {
-  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

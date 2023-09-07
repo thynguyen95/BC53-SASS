@@ -3,3 +3,35 @@
   color: $color;
   font-weight: $fw;
 }
+
+@mixin styleBtn($bg, $border, $radius, $color, $colorHover, $bgHover, $pd) {
+  background: $bg;
+  border: 2px solid $border;
+  border-radius: $radius;
+  color: $color;
+  padding: $pd;
+  transition: all 0.3s ease-in-out;
+
+  i {
+    margin-right: 5px;
+  }
+
+  &:hover {
+    text-decoration: none;
+    background: $bgHover;
+    color: $colorHover;
+  }
+}
+
+@mixin darkMode1() {
+  .darkMode {
+    @content;
+  }
+}
+
+@mixin darkMode2() {
+  // & : đại diện cho class bao ngoài include
+  .darkMode & {
+    @content;
+  }
+}
