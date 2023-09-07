@@ -1,3 +1,4 @@
+// có biến màu và biến mảng.
 // variable color
 $color-black: #000;
 $color-white: #fff;
@@ -51,8 +52,8 @@ $color-white: #fff;
   }
 }
 
-.c-list1 {
-  //   khai báo biến $root: đại diện cho .c-list1
+.c-list01 {
+  // khai báo biến $root: đại diện cho .c-list1
   $root: &;
 
   &__item {
@@ -67,6 +68,13 @@ $color-white: #fff;
 
   &--color2 {
     // #{$root}: đại diện cho .c-list1
+
+    // .c-list1__item {
+    //   a {
+    //     color: yellow;
+    //   }
+    // }
+
     #{$root}__item {
       a {
         color: yellow;
@@ -87,6 +95,7 @@ $color-white: #fff;
   background: yellow;
 }
 
+// biến mảng
 $breakpoint: (
   "extra-large": 1200px,
   "large": 992px,
@@ -114,11 +123,46 @@ $breakpoint: (
 //     // thuộc tính css cần responsive
 // }
 
-.test {
+.test,
+.test2 {
   @include responsive("medium") {
     // color: brown;
 
     @include styleText(30px, red, 700);
+  }
+}
+
+// vòng lặp for/while
+$number: 1;
+// from n to m: number chạy tới khi nhỏ hơn m là dừng.
+@for $number from 1 to 13 {
+  .col-#{$number} {
+    width: 100% * $number / 12;
+  }
+}
+
+// from n through m: number chạy tới khi <= m là dừng
+@for $number from 1 through 12 {
+  .col-#{$number} {
+    width: 100% * $number / 12;
+  }
+}
+
+//while: không tự tăng biến đếm
+@while $number < 13 {
+  .col-#{$number} {
+    width: 100% * $number / 12;
+  }
+
+  $number: $number + 1;
+}
+
+// each
+$sizes: 40px, 50px, 60px;
+// sizes[index]
+@each $size in $sizes {
+  .icon-#{$size} {
+    font-size: $size;
   }
 }
 
@@ -147,7 +191,7 @@ $breakpoint: (
 }
 
 $percent: 2%;
-@for $i from 0 to 50 {
+@for $i from 0 through 50 {
   [data-star^="#{$i/10}"] {
     &:after {
       width: $percent * $i;

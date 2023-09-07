@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Cyber Phone</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,13 +10,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- FONT FAMILY  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
+
     <header class="header">
         <nav class="container navbar navbar-expand-lg">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="header__logo navbar-brand" href="#">CyberPhone</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,52 +32,51 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
+                        <a class="nav-link" href="#">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+                        <a class="nav-link" href="#">Shop</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <div class="test">Test</div>
-
-    <ul class="c-list1">
-        <li class="c-list1__item"><a href="">1</a></li>
-        <li class="c-list1__item"><a href="">2</a></li>
-        <li class="c-list1__item"><a href="">3</a></li>
-    </ul>
-
-
-    <ul class="c-list1 c-list1--color2">
-        <li class="c-list1__item"><a href="">1</a></li>
-        <li class="c-list1__item"><a href="">2</a></li>
-        <li class="c-list1__item"><a href="">3</a></li>
-    </ul>
-
-    <div class="background">background</div>
-
-
-    <div class="background2">background2</div>
-
-    <i data-star="0.5"></i>
-    <i data-star="2"></i>
-    <i data-star="2.75"></i>
-    <i data-star="3.4"></i>
-    <i data-star="4.1"></i>
+    <section class="carousel">
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <div class="carousel__info">
+                        <h3 class="carousel__title">CyberPhone</h3>
+                        <h4 class="carousel__subtitle">Best Smartphone of 2021!</h4>
+                        <p class="carousel__text">Cras tortor mi, lobortis quis ornare in, varius scelerisque urna.
+                            Vivamus imperdiet dolor nec odio convallis consequat.</p>
+                        <div class="carousel__action">
+                            <a href="#" class="carousel__btn1">More infor</a>
+                            <a href="#" class="carousel__btn1">Shop</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="./image/product-header2.png" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="product"></section>
 
-    <div class="btn1">Button 1</div>
-    <div class="btn2">Button 2</div>
+    <footer class="footer"></footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

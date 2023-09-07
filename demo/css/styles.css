@@ -33,13 +33,13 @@
   content: "hello";
 }
 
-.c-list1__item a {
+.c-list01__item a {
   color: blue;
 }
-.c-list1__item a:hover {
+.c-list01__item a:hover {
   color: red;
 }
-.c-list1--color2 .c-list1__item a {
+.c-list01--color2 .c-list01__item a {
   color: yellow;
 }
 
@@ -54,11 +54,168 @@
 }
 
 @media screen and (max-width: 768px) {
-  .test {
+  .test,
+  .test2 {
     font-size: 30px;
     color: red;
     font-weight: 700;
   }
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-1 {
+  width: 8.3333333333%;
+}
+
+.col-2 {
+  width: 16.6666666667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+}
+
+.col-5 {
+  width: 41.6666666667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.3333333333%;
+}
+
+.col-8 {
+  width: 66.6666666667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.3333333333%;
+}
+
+.col-11 {
+  width: 91.6666666667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.icon-40px {
+  font-size: 40px;
+}
+
+.icon-50px {
+  font-size: 50px;
+}
+
+.icon-60px {
+  font-size: 60px;
 }
 
 [data-star] {
@@ -285,4 +442,8 @@
 
 [data-star^="4.9"]:after {
   width: 98%;
+}
+
+[data-star^="5"]:after {
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

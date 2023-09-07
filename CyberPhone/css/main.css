@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background: #f5f9fe;
+}
+
+.header {
+  background: #f5f9fe;
+  box-shadow: 0 2px 4px #e2ebfc;
+}
+.header__logo {
+  font-size: 30px;
+  color: #2a73dd;
+  font-weight: 700;
+}
+.header .navbar-nav .nav-item.active .nav-link {
+  color: #2a73dd;
+}
+.header .navbar-nav .nav-item.active .nav-link::after {
+  transform: scaleX(1);
+}
+.header .navbar-nav .nav-link {
+  font-size: 20px;
+  color: #1d365e;
+  font-weight: 400;
+  padding: 10px 20px;
+  position: relative;
+  transition: all 0.3s;
+}
+.header .navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #2a73dd;
+  transform: scaleX(0);
+  transition: all 0.3s;
+}
+.header .navbar-nav .nav-link:hover {
+  color: #2a73dd;
+}
+.header .navbar-nav .nav-link:hover::after {
+  transform: scaleX(1);
+}/*# sourceMappingURL=main.css.map */
